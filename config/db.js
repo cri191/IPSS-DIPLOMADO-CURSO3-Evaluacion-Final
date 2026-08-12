@@ -10,7 +10,7 @@ import mongoose from 'mongoose'
 //    apunta a una base local. Nadie debe poder entrar a tu base desde tu repo.
 
 const MONGODB_URI =
-  'mongodb+srv://usuario-mongo:clave-secreta@cluster0.xxxxx.mongodb.net/plataforma'
+  'mongodb://cri19142_db_user:BdowcK3aH9zP19zb@ac-av46c6m-shard-00-00.2mteewi.mongodb.net:27017,ac-av46c6m-shard-00-01.2mteewi.mongodb.net:27017,ac-av46c6m-shard-00-02.2mteewi.mongodb.net:27017/cursos?replicaSet=atlas-micdw3-shard-0&ssl=true&authSource=admin'
 
 export const conectar = async () => {
   await mongoose.connect(MONGODB_URI)

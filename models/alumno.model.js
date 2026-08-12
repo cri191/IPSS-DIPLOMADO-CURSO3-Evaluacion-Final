@@ -11,9 +11,19 @@ import mongoose from 'mongoose'
 
 const alumnoSchema = new mongoose.Schema(
   {
-    // ...
+    nombre: { type: String, required: true },
+    email: { type: String, required: true, unique: true },
+    telefono: { type: String },
+    password: { type: String, required: true }   
   },
   { timestamps: true },
 )
+
+// oculta el password cuando se haga JSON.stringify() o res.json() de un alumno
+alumnoSchema.methods.toJSON = function () {
+  const alumno = this.toObject()
+  delete alumno.password
+  return alumno
+}
 
 export const Alumno = mongoose.model('Alumno', alumnoSchema, 'alumnos')
