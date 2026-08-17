@@ -11,7 +11,7 @@
 1. clonar repositorio
 
 ```bash
-git clone https://github.com/TU-USUARIO/IPSS-DIPLOMADO-CURSO3-Evaluacion-Final.git
+git clone https://github.com/cri191/IPSS-DIPLOMADO-CURSO3-Evaluacion-Final.git
 cd IPSS-DIPLOMADO-CURSO3-Evaluacion-Final
 npm install 
 ```
