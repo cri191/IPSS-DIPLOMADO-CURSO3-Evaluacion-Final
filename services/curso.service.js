@@ -70,7 +70,10 @@ export const matricularAlumno = async (cursoId, alumnoId) => {
   }
   return await Curso.findByIdAndUpdate(cursoId, { $addToSet: { alumnos: alumnoId } }, { new: true }).populate('profesor').populate('alumnos')
 }
-//listar cursos
-export const listarCursosConAlumnos = async () => {
-  return await Curso.find().populate('profesor').populate('alumnos')
-}   
+//quitar alumno
+export const quitarAlumno = async (cursoId,alumnoId) => {
+  return await Curso.findByIdAndUpdate(
+    cursoId,{$pull:{alumnos:alumnoId}},{new:true}
+  );
+  
+};  

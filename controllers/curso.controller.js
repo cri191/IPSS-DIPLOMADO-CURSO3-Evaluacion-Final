@@ -12,7 +12,7 @@ export const listar = async (req, res) => {
   try {
     // TODO: devuelve todos los cursos, con .populate() del profesor y los alumnos.
 
-const cursos = await service.listar()
+const cursos = await service.listarCursos()
     res.json(cursos)  
 
   } catch (error) {

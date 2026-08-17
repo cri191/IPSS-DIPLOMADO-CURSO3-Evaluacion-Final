@@ -8,4 +8,4 @@ export const JWT_SECRET = process.env.JWT_SECRET || 'llave_secreta_trabajo_final
 
 
 // Cuánto dura la sesión.
-export const JWT_EXPIRA = '5h';
+export const JWT_EXPIRA = '7d';
